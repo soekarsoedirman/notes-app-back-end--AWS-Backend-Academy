@@ -1,23 +1,25 @@
-const { 
-  addNoteHandler, 
-  getAllNotesHandler, 
-  getNoteByIdHandler, 
+/* eslint-disable linebreak-style */
+
+const {
+  addNoteHandler,
+  getAllNotesHandler,
+  getNoteByIdHandler,
   editNoteByIdHandler,
-  deleteNoteByIdHandler, 
+  deleteNoteByIdHandler,
 } = require('./handler');
 
 const routes = [
- {
-  method: 'POST',
-  path: '/notes',
-  handler: addNoteHandler,
- },
- {
+  {
+    method: 'POST',
+    path: '/notes',
+    handler: addNoteHandler,
+  },
+  {
     method: 'GET',
     path: '/notes',
     handler: getAllNotesHandler,
- },
- {
+  },
+  {
     method: 'GET',
     path: '/notes/{id}',
     handler: getNoteByIdHandler,
@@ -33,5 +35,5 @@ const routes = [
     handler: deleteNoteByIdHandler,
   },
 ];
- 
+
 module.exports = routes;
